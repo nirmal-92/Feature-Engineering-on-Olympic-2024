@@ -22,28 +22,34 @@ population: Population of the country
 # Feature Engineering
 In this project, various feature engineering techniques were applied to enhance the predictive power of the dataset:
 
-# Missing Value Imputation:
-
+## Missing Value Imputation:
 GDP: Filled with the median value.
 Population: Filled with the mean value.
 Region: Filled with 'Unknown' for missing entries.
-New Feature Creation:
 
+## New Feature Creation:
 gdp_per_capita: Calculated as gdp / population.
 medals_per_capita: Calculated as total / population.
 weighted_medal_score: Calculated using a weighted sum of medals, i.e., gold * 3 + silver * 2 + bronze.
-One-Hot Encoding:
 
+## One-Hot Encoding:
 Encoded categorical variables (like region) using one-hot encoding.
-Model Training and Evaluation
+
+# Model Training and Evaluation
 The dataset was split into training (70%) and testing (30%) sets.
+
 A Random Forest Regressor was used to predict the total medal count for each country.
+
 Feature Scaling was applied using StandardScaler for improved model performance.
-Model Evaluation Metrics:
+
+## Model Evaluation Metrics:
 R² Score: Indicates the proportion of the variance in the dependent variable that is predictable from the independent variables.
+
 Mean Absolute Error (MAE): Measures the average magnitude of errors in a set of predictions, without considering their direction.
+
 Root Mean Squared Error (RMSE): Measures the square root of the average of squared differences between prediction and actual observation.
-Prediction for Future Olympics (2028)
+
+# Prediction for Future Olympics (2028)
 Using the trained model, predictions were made for India's performance in the 2028 Olympics. The model considered India's projected GDP, population, and historical medal performance.
 
 # Thank You
